@@ -12,7 +12,7 @@ namespace area_sharp
         public Square(decimal side)
         {
             if (side < 0)
-                throw new ShapeException(side);
+                throw new ShapeException("Square side: ", side);
             this.side = side;
         }
         public override decimal CalcArea() { return side * side; }

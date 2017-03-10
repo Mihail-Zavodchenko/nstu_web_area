@@ -10,8 +10,16 @@ namespace area_sharp
     {
         static void Main(string[] args)
         {
-            Shape shape = new Square(100);
-            Console.Out.WriteLine(shape.CalcArea());
+            try
+            {
+                Shape shape = new Square(-100);
+                Console.Out.WriteLine(shape.CalcArea());
+            }
+            catch (ShapeException e)
+            {
+                Console.Out.WriteLine(e);
+            }
+            finally { }
         }
     }
 }
